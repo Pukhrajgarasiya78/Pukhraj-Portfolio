@@ -1,0 +1,1057 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Pukhraj's Certificate</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e0e0e0, #f4f4f4);
+            color: #333;
+            perspective: 1200px;
+            overflow: visible;
+            overflow-y: scroll;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+            /* For Chrome, Safari, and Opera */
+        }
+
+        span:hover {
+            color: #ee4242;
+            ;
+        }
+
+        #header {
+            /* display: flex; */
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #364c63;
+            ;
+            color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+            top: 1em;
+            width: calc(100% - -14px);
+            /* width: 72em; */
+            z-index: 10;
+            left: -1em;
+            transition: background 0.3s ease;
+        }
+
+        #header:hover {
+            background: #004494;
+            /* Darker background on hover */
+        }
+
+        #header .icons a {
+            color: #fff;
+            margin-left: 15px;
+            font-size: 20px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        #header .icons a:hover {
+            color: #ffcc00;
+            transform: scale(1.3);
+            /* Slight zoom effect on hover */
+        }
+
+        #header .logo {
+            color: #fff;
+            font-size: 28px;
+            text-decoration: none;
+            transform: translateZ(50px);
+            /* 3D effect for logo */
+        }
+
+        /* Sidebar */
+        #sidebar {
+            width: 25em;
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px;
+            top: 20px;
+            height: 842vh;
+            bottom: 0;
+            border-radius: 1em;
+            left: 32px;
+            box-shadow: 4px 0 16px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            /* Hide overflow */
+            transition: left 0.5s ease;
+        }
+
+        #sidebar.active {
+            left: -360px;
+            /* Moves the sidebar off-screen */
+        }
+
+        #sidebar h2 {
+            font-size: 0.68889em;
+            color: cornsilk;
+            position: relative;
+            top: -1em;
+            right: -0.2em;
+        }
+
+        #sidebar .toggle:before {
+            content: '\f0c9';
+            font-size: 2rem;
+            height: inherit;
+            left: -0.58em;
+            line-height: inherit;
+            position: absolute;
+            text-indent: 0;
+            top: 0;
+            width: inherit;
+        }
+
+        #sidebar .inner {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Menu */
+        #menu {
+            margin-top: 20px;
+        }
+
+        #menu ul {
+            list-style: none;
+            padding: 0;
+            width: 247px;
+        }
+
+        #menu ul li {
+            margin: 0;
+            padding: 10px;
+            top: 1em;
+            position: relative;
+            width: 18em;
+            border-bottom: 1px solid white;
+            transition: background 0.3s, transform 0.3s;
+            transform: rotateX(0deg);
+        }
+
+        #menu ul li:hover {
+            background: #007bff;
+            transform: rotateX(5deg);
+            /* Tilt effect on hover */
+        }
+
+        #menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            font-size: 1.3em;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .major {
+            font-size: 28px;
+            padding-bottom: 0px;
+            margin-bottom: -50px;
+        }
+
+        .full-width {
+            width: 100%;
+            flex: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #sidebar {
+                left: 0;
+                /* Sidebar is visible on mobile */
+            }
+
+            #sidebar.active {
+                left: 0;
+                /* Sidebar is always visible on mobile */
+            }
+
+            #header {
+                width: 100%;
+                position: relative;
+                top: 0;
+            }
+        }
+
+        /* More practical cases */
+        @media screen and (max-width: 1200px) {}
+
+        @media screen and (max-width: 768px) {}
+
+        @media screen and (max-width: 480px) {}
+
+        #main {
+            /* flex: 1; */
+            background: #ecf0f1;
+            /* padding: 20px; */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            margin-top: 19px;
+            position: relative;
+            left: 2.5em;
+            height: 100%;
+            transform: rotateY(0deg);
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+        }
+
+        #main:hover {
+            transform: rotateY(5deg);
+            /* Slight rotation effect on hover */
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            /* Enhanced shadow on hover */
+        }
+
+
+        #nameImg {
+            position: relative;
+            top: -5em;
+        }
+
+        .course-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .course-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .course {
+            display: none;
+            /* Hide the description by default */
+            flex: 1;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 0.9em;
+            line-height: 1.4em;
+        }
+
+        .course h2 {
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .course h3 {
+            font-size: 1em;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .course ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .course ul li {
+            background: #f9f9f9;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+
+        .course p {
+            margin-bottom: 10px;
+        }
+
+        #menu ul li {
+            margin: 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #f6e9e9;
+        }
+
+        #item {
+            position: relative;
+            left: 5vw;
+        }
+
+        span:hover {
+            color: #ee4242;
+            ;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Pukhraj's</strong> Certifications</a>
+                    <ul class="icons">
+                        <li class="icon brands fa-instagram"><a
+                                href="https://www.instagram.com/bhole_ka_bhakt__pukhraj/"><span
+                                    class="label">Instagram</span></a></li>
+                        <li class="icon brands fa-linkedin"><a
+                                href="https://www.linkedin.com/in/pukhraj-garasiya-515334241/"><span
+                                    class="label">Linkedin</span></a></li>
+                    </ul>
+                </header>
+                <!-- Banner -->
+                <section id="banner">
+                    <div id="item">
+                        <div class="container">
+                            <h2>Career Essentials in Data Analysis by Microsoft and LinkedIn</h2>
+                            <div class="course-container">
+                                <img src="images/CertificateOfCompletion_Career Essentials in Data Analysis by Microsoft and LinkedIn_page-0001.jpg"
+                                    width="600px" height="500px" alt="Certificate of Completion"
+                                    onclick="toggleDescription()">
+                            </div>
+                            <div class="course" id="course-description">
+                                <h2>About</h2>
+                                <p>The "Career Essentials in Data Analysis" course, created by Microsoft and LinkedIn,
+                                    is
+                                    designed to provide foundational and advanced skills in data analysis. This course
+                                    is
+                                    perfect for individuals looking to start or advance their careers in data analysis.
+                                </p>
+
+                                <h3>Key Features:</h3>
+                                <ul>
+                                    <li><strong>Comprehensive Curriculum:</strong> Covers data collection, cleaning,
+                                        statistical analysis, visualization, and interpretation.</li>
+                                    <li><strong>Hands-on Experience:</strong> Real-world projects and exercises to apply
+                                        knowledge in practical settings.</li>
+                                    <li><strong>Expert Instruction:</strong> Taught by industry experts from Microsoft
+                                        and
+                                        LinkedIn.</li>
+                                    <li><strong>Certification:</strong> Receive a certification upon completion,
+                                        showcasing
+                                        your expertise.</li>
+                                    <li><strong>Access to Tools:</strong> Training on popular tools like Microsoft
+                                        Excel,
+                                        Power BI, and SQL.</li>
+                                    <li><strong>Flexible Learning:</strong> Study at your own pace, making it ideal for
+                                        working professionals and students.</li>
+                                </ul>
+
+                                <h3>What You'll Learn:</h3>
+                                <ul>
+                                    <li>Fundamentals of data analysis.</li>
+                                    <li>Statistical methods and data visualization techniques.</li>
+                                    <li>Advanced analysis using Excel, Power BI, and SQL.</li>
+                                    <li>Best practices for data reporting and presenting findings.</li>
+                                </ul>
+
+                                <h3>Ideal For:</h3>
+                                <ul>
+                                    <li>Aspiring data analysts.</li>
+                                    <li>Professionals seeking to enhance their data skills.</li>
+                                    <li>Anyone interested in making data-driven decisions.</li>
+                                </ul>
+
+                                <p>This course equips you with industry-relevant skills and hands-on experience, making
+                                    you
+                                    job-ready in the field of data analysis.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container">
+                            <h2>Introduction to Duet AI in Google Workspace</h2>
+                            <div class="course-container">
+                                <!-- Add your image source here -->
+                                <img src="images/Dual AI_page-0001.jpg" width="600vw" height="500vh"
+                                    alt="Certificate of Completion" onclick="toggleDescription2()">
+                            </div>
+                            <div class="course" id="course-description2">
+                                <h2>About</h2>
+                                <p>"Introduction to Duet AI in Google Workspace" is a comprehensive course designed to
+                                    familiarize users with the innovative collaboration between Google Workspace and
+                                    Duet AI. This course explores the integration of Duet AI, which combines Google's
+                                    powerful productivity tools with artificial intelligence capabilities, to enhance
+                                    collaboration, streamline workflows, and boost productivity. Participants will learn
+                                    how Duet AI can assist in tasks such as organizing emails, scheduling meetings, and
+                                    generating insights from data. The course also covers best practices for leveraging
+                                    Duet AI effectively within the Google Workspace environment, ensuring that users can
+                                    make the most of this cutting-edge technology.</p>
+
+                                <h3>Key Features:</h3>
+                                <ul>
+                                    <li><strong>Comprehensive Overview:</strong> Learn about the integration of Duet AI
+                                        into Google Workspace and how it can improve collaboration and productivity.
+                                    </li>
+                                    <li><strong>Hands-on Experience:</strong> Engage in practical exercises to
+                                        understand how to use Duet AI features effectively.</li>
+                                    <li><strong>Expert Guidance:</strong> Receive guidance from experts on best
+                                        practices for using Duet AI in Google Workspace.</li>
+                                    <li><strong>Certification:</strong> Receive a certification upon completion,
+                                        showcasing your understanding of Duet AI in Google Workspace.</li>
+                                    <li><strong>Access to Tools:</strong> Learn how to use Duet AI features such as
+                                        intelligent suggestions for emails, calendar scheduling, and more.</li>
+                                    <li><strong>Flexible Learning:</strong> Study at your own pace, making it suitable
+                                        for busy professionals and teams.</li>
+                                </ul>
+
+                                <h3>What You'll Learn:</h3>
+                                <ul>
+                                    <li>Understanding the benefits of Duet AI in Google Workspace.</li>
+                                    <li>Using Duet AI features to enhance collaboration and productivity.</li>
+                                    <li>Best practices for integrating Duet AI into your daily workflow.</li>
+                                </ul>
+
+                                <h3>Ideal For:</h3>
+                                <ul>
+                                    <li>Professionals and teams looking to enhance their productivity and collaboration
+                                        using artificial intelligence.</li>
+                                    <li>Anyone interested in learning about the latest advancements in AI and
+                                        productivity tools.</li>
+                                </ul>
+
+                                <p>This course provides a comprehensive introduction to Duet AI in Google Workspace,
+                                    equipping participants with the knowledge and skills needed to leverage this
+                                    technology effectively in their work environment.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container">
+                            <h2>CREATE IMAGE CAPTIONING MODELS</h2>
+                            <div class="course-container">
+                                <!-- Add your image source here -->
+                                <img src="images/create image capioning models_page-0001.jpg" width="600vw"
+                                    height="500vh" alt="Certificate of Completion" onclick="toggleDescription3()">
+                            </div>
+                            <div class="course" id="course-description3">
+                                <h2>About</h2>
+                                <p>"Create Image Captioning Models" is a comprehensive course designed to teach
+                                    participants how to build advanced image captioning models using deep learning
+                                    techniques. In this course, participants will learn the theoretical foundations of
+                                    image captioning and gain practical experience in implementing and training image
+                                    captioning models using popular deep learning frameworks like TensorFlow and
+                                    PyTorch.</p>
+
+                                <h3>Key Features:</h3>
+                                <ul>
+                                    <li><strong>Comprehensive Overview:</strong> Gain a deep understanding of image
+                                        captioning algorithms and architectures.</li>
+                                    <li><strong>Hands-on Experience:</strong> Engage in practical exercises to implement
+                                        and train image captioning models.</li>
+                                    <li><strong>Expert Guidance:</strong> Receive guidance from experienced instructors
+                                        with expertise in deep learning and computer vision.</li>
+                                    <li><strong>Certification:</strong> Receive a certification upon completion,
+                                        showcasing your proficiency in building image captioning models.</li>
+                                    <li><strong>Access to Tools:</strong> Learn to use popular deep learning frameworks
+                                        and libraries for image captioning tasks.</li>
+                                    <li><strong>Flexible Learning:</strong> Study at your own pace, making it suitable
+                                        for learners of all levels.</li>
+                                </ul>
+
+                                <h3>What You'll Learn:</h3>
+                                <ul>
+                                    <li>Understanding the concepts and challenges of image captioning.</li>
+                                    <li>Implementing convolutional neural networks (CNNs) and recurrent neural networks
+                                        (RNNs) for image captioning.</li>
+                                    <li>Training image captioning models using real-world datasets.</li>
+                                    <li>Evaluating and improving the performance of image captioning models.</li>
+                                </ul>
+
+                                <h3>Ideal For:</h3>
+                                <ul>
+                                    <li>Data scientists and machine learning engineers interested in computer vision and
+                                        natural language processing.</li>
+                                    <li>Researchers and students exploring advanced topics in deep learning and
+                                        artificial intelligence.</li>
+                                    <li>Professionals seeking to enhance their skills in image processing and model
+                                        development.</li>
+                                </ul>
+
+                                <p>This course equips you with the knowledge and practical skills needed to create
+                                    state-of-the-art image captioning models, enabling you to generate accurate and
+                                    meaningful descriptions for images.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container">
+                            <h2>Introduction to Data Analytics</h2>
+                            <div class="course-container">
+                                <!-- Add your image source here -->
+                                <img src="images/data analytic_page-0001.jpg" width="600vw" height="500vh"
+                                    alt="Certificate of Completion" onclick="toggleDescription4()">
+                            </div>
+                            <div class="course" id="course-description4">
+                                <h2>About</h2>
+                                <p>"Introduction to Data Analytics" is a foundational course designed to provide
+                                    participants with a comprehensive understanding of data analytics. In this course,
+                                    participants will learn key concepts, tools, and techniques used in data analytics
+                                    to derive insights from data.</p>
+
+                                <h3>Key Features:</h3>
+                                <ul>
+                                    <li><strong>Comprehensive Overview:</strong> Gain a broad understanding of data
+                                        analytics concepts and methodologies.</li>
+                                    <li><strong>Hands-on Experience:</strong> Engage in practical exercises to analyze
+                                        real-world datasets.</li>
+                                    <li><strong>Expert Guidance:</strong> Receive guidance from experienced instructors
+                                        with expertise in data analytics and business intelligence.</li>
+                                    <li><strong>Certification:</strong> Receive a certification upon completion,
+                                        showcasing your proficiency in data analytics.</li>
+                                    <li><strong>Access to Tools:</strong> Learn to use popular data analytics tools and
+                                        software.</li>
+                                    <li><strong>Flexible Learning:</strong> Study at your own pace, making it suitable
+                                        for learners of all levels.</li>
+                                </ul>
+
+                                <h3>What You'll Learn:</h3>
+                                <ul>
+                                    <li>Understanding the basic concepts and importance of data analytics.</li>
+                                    <li>Exploring data collection, cleaning, and preprocessing techniques.</li>
+                                    <li>Implementing data visualization to communicate insights effectively.</li>
+                                    <li>Applying statistical methods and machine learning algorithms to analyze data.
+                                    </li>
+                                    <li>Evaluating and interpreting analytical results to make informed decisions.</li>
+                                </ul>
+
+                                <h3>Ideal For:</h3>
+                                <ul>
+                                    <li>Aspiring data analysts and business intelligence professionals.</li>
+                                    <li>Students and researchers interested in learning data analysis techniques.</li>
+                                    <li>Professionals seeking to enhance their data-driven decision-making skills.</li>
+                                </ul>
+
+                                <p>This course equips you with the knowledge and practical skills needed to perform data
+                                    analysis, enabling you to extract valuable insights and drive data-informed
+                                    decisions in various domains.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container">
+                            <h2>Basic Excel for Data Analytics</h2>
+                            <div class="course-container">
+                                <!-- Add your image source here -->
+                                <img src="images/Basic Excel For data analysis_page-0001.jpg" width="600vw"
+                                    height="500vh" alt="Certificate of Completion" onclick="toggleDescription5()">
+                            </div>
+                            <div class="course" id="course-description5">
+                                <h2>About</h2>
+                                <p>"Basic Excel for Data Analytics" is a practical course designed to introduce
+                                    participants to the essential features and functions of Microsoft Excel for data
+                                    analysis. In this course, participants will learn how to leverage Excel's
+                                    capabilities to organize, analyze, and visualize data effectively.</p>
+
+                                <h3>Key Features:</h3>
+                                <ul>
+                                    <li><strong>Comprehensive Overview:</strong> Gain a solid understanding of Excel's
+                                        data analytics tools and functions.</li>
+                                    <li><strong>Hands-on Experience:</strong> Engage in practical exercises to apply
+                                        Excel functions and tools on real-world datasets.</li>
+                                    <li><strong>Expert Guidance:</strong> Receive guidance from experienced instructors
+                                        with expertise in data analytics and Excel.</li>
+                                    <li><strong>Certification:</strong> Receive a certification upon completion,
+                                        showcasing your proficiency in using Excel for data analytics.</li>
+                                    <li><strong>Access to Tools:</strong> Learn to use various Excel features such as
+                                        pivot tables, charts, and data analysis tools.</li>
+                                    <li><strong>Flexible Learning:</strong> Study at your own pace, making it suitable
+                                        for learners of all levels.</li>
+                                </ul>
+
+                                <h3>What You'll Learn:</h3>
+                                <ul>
+                                    <li>Understanding the basic functionalities and interface of Excel.</li>
+                                    <li>Organizing and cleaning data for analysis.</li>
+                                    <li>Using formulas and functions to perform data calculations.</li>
+                                    <li>Creating and interpreting pivot tables and charts for data visualization.</li>
+                                    <li>Applying Excel's data analysis tools to extract insights from data.</li>
+                                </ul>
+
+                                <h3>Ideal For:</h3>
+                                <ul>
+                                    <li>Beginners looking to get started with data analytics using Excel.</li>
+                                    <li>Students and professionals seeking to enhance their data analysis skills.</li>
+                                    <li>Anyone interested in learning how to use Excel for organizing and analyzing
+                                        data.</li>
+                                </ul>
+
+                                <p>This course equips you with the foundational skills needed to use Excel effectively
+                                    for data analytics, enabling you to organize, analyze, and visualize data to support
+                                    data-driven decision-making.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container">
+                            <h2>Basic of Python</h2>
+                            <div class="course-container">
+                                <!-- Add your image source here -->
+                                <img src="images/basicPython_page-0001.jpg" width="600vw" height="500vh"
+                                    alt="Certificate of Completion" onclick="toggleDescription6()">
+                            </div>
+                            <div class="course" id="course-description6">
+                                <h2>About</h2>
+                                <p>"Basics of Python" is an introductory course designed to teach participants the
+                                    fundamental concepts and syntax of the Python programming language. In this course,
+                                    participants will learn how to write, debug, and execute Python programs, providing
+                                    a strong foundation for further learning and application in various fields.</p>
+
+                                <h3>Key Features:</h3>
+                                <ul>
+                                    <li><strong>Comprehensive Overview:</strong> Gain a solid understanding of Python's
+                                        syntax, data structures, and programming paradigms.</li>
+                                    <li><strong>Hands-on Experience:</strong> Engage in practical exercises and coding
+                                        projects to reinforce learning.</li>
+                                    <li><strong>Expert Guidance:</strong> Receive guidance from experienced instructors
+                                        with expertise in Python programming.</li>
+                                    <li><strong>Certification:</strong> Receive a certification upon completion,
+                                        showcasing your proficiency in basic Python programming.</li>
+                                    <li><strong>Access to Tools:</strong> Learn to use popular Python libraries and
+                                        tools for coding and debugging.</li>
+                                    <li><strong>Flexible Learning:</strong> Study at your own pace, making it suitable
+                                        for learners of all levels.</li>
+                                </ul>
+
+                                <h3>What You'll Learn:</h3>
+                                <ul>
+                                    <li>Understanding the basic syntax and structure of Python programs.</li>
+                                    <li>Working with variables, data types, and operators.</li>
+                                    <li>Implementing control flow statements such as loops and conditionals.</li>
+                                    <li>Using functions and modules to write reusable code.</li>
+                                    <li>Introduction to Python's standard libraries for data manipulation and analysis.
+                                    </li>
+                                </ul>
+
+                                <h3>Ideal For:</h3>
+                                <ul>
+                                    <li>Beginners looking to start their programming journey with Python.</li>
+                                    <li>Students and professionals seeking to learn a versatile and powerful programming
+                                        language.</li>
+                                    <li>Anyone interested in pursuing a career in software development, data science, or
+                                        related fields.</li>
+                                </ul>
+
+                                <p>This course equips you with the foundational skills needed to write and understand
+                                    Python programs, enabling you to pursue further learning and applications in various
+                                    programming and data-related domains.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container">
+                            <h2>Introduction of Deep Learning</h2>
+                            <div class="course-container">
+                                <!-- Add your image source here -->
+                                <img src="images/Introduction to deep learning_page-0001.jpg" width="600vw"
+                                    height="500vh" alt="Certificate of Completion" onclick="toggleDescription7()">
+                            </div>
+                            <div class="course" id="course-description7">
+                                <h2>About</h2>
+                                <p>"Introduction to Deep Learning" is a comprehensive course designed to teach
+                                    participants the fundamental concepts and techniques of deep learning. In this
+                                    course, participants will learn the theoretical foundations of deep learning and
+                                    gain practical experience in building and training deep learning models using
+                                    popular frameworks such as TensorFlow and PyTorch.</p>
+
+                                <h3>Key Features:</h3>
+                                <ul>
+                                    <li><strong>Comprehensive Overview:</strong> Gain a deep understanding of deep
+                                        learning algorithms and architectures.</li>
+                                    <li><strong>Hands-on Experience:</strong> Engage in practical exercises to build and
+                                        train deep learning models.</li>
+                                    <li><strong>Expert Guidance:</strong> Receive guidance from experienced instructors
+                                        with expertise in deep learning and artificial intelligence.</li>
+                                    <li><strong>Certification:</strong> Receive a certification upon completion,
+                                        showcasing your proficiency in deep learning.</li>
+                                    <li><strong>Access to Tools:</strong> Learn to use popular deep learning frameworks
+                                        and libraries for model development.</li>
+                                    <li><strong>Flexible Learning:</strong> Study at your own pace, making it suitable
+                                        for learners of all levels.</li>
+                                </ul>
+
+                                <h3>What You'll Learn:</h3>
+                                <ul>
+                                    <li>Understanding the basics of neural networks and deep learning.</li>
+                                    <li>Implementing feedforward and convolutional neural networks (CNNs).</li>
+                                    <li>Training deep learning models using real-world datasets.</li>
+                                    <li>Evaluating and improving the performance of deep learning models.</li>
+                                    <li>Applying deep learning techniques to various domains such as computer vision and
+                                        natural language processing.</li>
+                                </ul>
+
+                                <h3>Ideal For:</h3>
+                                <ul>
+                                    <li>Data scientists and machine learning engineers interested in deep learning.</li>
+                                    <li>Researchers and students exploring advanced topics in artificial intelligence.
+                                    </li>
+                                    <li>Professionals seeking to enhance their skills in neural network-based model
+                                        development.</li>
+                                </ul>
+
+                                <p>This course equips you with the knowledge and practical skills needed to create
+                                    state-of-the-art deep learning models, enabling you to tackle complex problems in
+                                    various fields using advanced AI techniques.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container">
+                            <h2>Explore Machine Learning using Python</h2>
+                            <div class="course-container">
+                                <!-- Add your image source here -->
+                                <img src="images/machineLearning_page-0001.jpg" width="600vw" height="500vh"
+                                    alt="Certificate of Completion" onclick="toggleDescription8()">
+                            </div>
+                            <div class="course" id="course-description8">
+                                <h2>About</h2>
+                                <p>"Explore Machine Learning with Python" is an in-depth course designed to introduce
+                                    participants to the core concepts and practical applications of machine learning
+                                    using Python. In this course, participants will learn how to build, train, and
+                                    evaluate machine learning models using popular Python libraries and frameworks.</p>
+
+                                <h3>Key Features:</h3>
+                                <ul>
+                                    <li><strong>Comprehensive Overview:</strong> Gain a solid understanding of machine
+                                        learning principles and algorithms.</li>
+                                    <li><strong>Hands-on Experience:</strong> Engage in practical exercises to implement
+                                        machine learning models using Python.</li>
+                                    <li><strong>Expert Guidance:</strong> Receive guidance from experienced instructors
+                                        with expertise in machine learning and data science.</li>
+                                    <li><strong>Certification:</strong> Receive a certification upon completion,
+                                        showcasing your proficiency in machine learning with Python.</li>
+                                    <li><strong>Access to Tools:</strong> Learn to use popular Python libraries such as
+                                        scikit-learn, pandas, and NumPy.</li>
+                                    <li><strong>Flexible Learning:</strong> Study at your own pace, making it suitable
+                                        for learners of all levels.</li>
+                                </ul>
+
+                                <h3>What You'll Learn:</h3>
+                                <ul>
+                                    <li>Understanding the fundamentals of machine learning and its applications.</li>
+                                    <li>Implementing supervised and unsupervised learning algorithms.</li>
+                                    <li>Preprocessing and cleaning data for machine learning tasks.</li>
+                                    <li>Building and training machine learning models using scikit-learn.</li>
+                                    <li>Evaluating model performance and applying techniques to improve accuracy.</li>
+                                    <li>Working with real-world datasets to solve practical problems.</li>
+                                </ul>
+
+                                <h3>Ideal For:</h3>
+                                <ul>
+                                    <li>Aspiring data scientists and machine learning engineers.</li>
+                                    <li>Students and professionals seeking to enhance their understanding of machine
+                                        learning.</li>
+                                    <li>Anyone interested in leveraging machine learning techniques for data analysis
+                                        and prediction tasks.</li>
+                                </ul>
+
+                                <p>This course equips you with the foundational skills needed to build and deploy
+                                    machine learning models using Python, enabling you to solve complex problems and
+                                    derive insights from data.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container">
+                            <h2>Introduction to Natural Language Processing</h2>
+                            <div class="course-container">
+                                <!-- Add your image source here -->
+                                <img src="images/NLP_page-0001.jpg" width="600vw" height="500vh"
+                                    alt="Certificate of Completion" onclick="toggleDescription9()">
+                            </div>
+                            <div class="course" id="course-description9">
+                                <h2>About</h2>
+                                <p>"Introduction to Natural Language Processing" is a comprehensive course designed to
+                                    introduce participants to the fundamental concepts and techniques of Natural
+                                    Language Processing (NLP). In this course, participants will learn how to process
+                                    and analyze textual data using popular NLP frameworks and libraries.</p>
+
+                                <h3>Key Features:</h3>
+                                <ul>
+                                    <li><strong>Comprehensive Overview:</strong> Gain a deep understanding of NLP
+                                        concepts, algorithms, and applications.</li>
+                                    <li><strong>Hands-on Experience:</strong> Engage in practical exercises to
+                                        preprocess and analyze text data.</li>
+                                    <li><strong>Expert Guidance:</strong> Receive guidance from experienced instructors
+                                        with expertise in NLP and machine learning.</li>
+                                    <li><strong>Certification:</strong> Receive a certification upon completion,
+                                        showcasing your proficiency in NLP techniques.</li>
+                                    <li><strong>Access to Tools:</strong> Learn to use popular NLP libraries such as
+                                        NLTK, spaCy, and TensorFlow.</li>
+                                    <li><strong>Flexible Learning:</strong> Study at your own pace, making it suitable
+                                        for learners of all levels.</li>
+                                </ul>
+
+                                <h3>What You'll Learn:</h3>
+                                <ul>
+                                    <li>Understanding the basics of NLP and its significance in AI.</li>
+                                    <li>Preprocessing text data: tokenization, stemming, lemmatization, and stop-word
+                                        removal.</li>
+                                    <li>Implementing text classification, sentiment analysis, and named entity
+                                        recognition.</li>
+                                    <li>Using word embeddings and advanced NLP models like BERT and GPT.</li>
+                                    <li>Building and evaluating NLP models using real-world datasets.</li>
+                                </ul>
+
+                                <h3>Ideal For:</h3>
+                                <ul>
+                                    <li>Data scientists and machine learning engineers interested in text analysis and
+                                        NLP.</li>
+                                    <li>Researchers and students exploring advanced topics in artificial intelligence.
+                                    </li>
+                                    <li>Professionals seeking to enhance their skills in text mining and natural
+                                        language understanding.</li>
+                                </ul>
+
+                                <p>This course equips you with the knowledge and practical skills needed to process and
+                                    analyze textual data effectively, enabling you to build sophisticated NLP
+                                    applications and models.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container">
+                            <h2> Proven Techniques for Technical Communication</h2>
+                            <div class="course-container">
+                                <!-- Add your image source here -->
+                                <img src="images/technicalCommunication_page-0001.jpg" width="600vw" height="500vh"
+                                    alt="Certificate of Completion" onclick="toggleDescription10()">
+                            </div>
+                            <div class="course" id="course-description10">
+                                <h2>About</h2>
+                                <p>"Proven Techniques for Technical Communication" is a practical course designed to
+                                    enhance participants' skills in conveying technical information clearly and
+                                    effectively. This course covers essential communication strategies, document design,
+                                    and the use of various tools and platforms for effective technical communication.
+                                </p>
+
+                                <h3>Key Features:</h3>
+                                <ul>
+                                    <li><strong>Comprehensive Overview:</strong> Gain a thorough understanding of
+                                        technical communication principles and best practices.</li>
+                                    <li><strong>Hands-on Experience:</strong> Engage in practical exercises to create
+                                        clear, concise, and impactful technical documents.</li>
+                                    <li><strong>Expert Guidance:</strong> Receive guidance from experienced instructors
+                                        with expertise in technical writing and communication.</li>
+                                    <li><strong>Certification:</strong> Receive a certification upon completion,
+                                        showcasing your proficiency in technical communication.</li>
+                                    <li><strong>Access to Tools:</strong> Learn to use popular tools and platforms for
+                                        creating and managing technical documents.</li>
+                                    <li><strong>Flexible Learning:</strong> Study at your own pace, making it suitable
+                                        for learners of all levels.</li>
+                                </ul>
+
+                                <h3>What You'll Learn:</h3>
+                                <ul>
+                                    <li>Understanding the principles of effective technical communication.</li>
+                                    <li>Developing skills for writing clear and concise technical documents.</li>
+                                    <li>Designing and formatting documents for readability and impact.</li>
+                                    <li>Using visuals and graphics to enhance technical communication.</li>
+                                    <li>Mastering tools and platforms for document creation and management.</li>
+                                    <li>Communicating complex technical information to diverse audiences.</li>
+                                </ul>
+
+                                <h3>Ideal For:</h3>
+                                <ul>
+                                    <li>Technical writers and communicators looking to improve their skills.</li>
+                                    <li>Engineers, scientists, and professionals who need to communicate technical
+                                        information effectively.</li>
+                                    <li>Students and researchers seeking to enhance their technical writing
+                                        capabilities.</li>
+                                    <li>Anyone interested in learning how to convey technical information clearly and
+                                        efficiently.</li>
+                                </ul>
+
+                                <p>This course equips you with the knowledge and practical skills needed to excel in
+                                    technical communication, enabling you to create impactful documents and convey
+                                    technical information effectively to various audiences.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container">
+                            <h2> Practical HTML,CSS, JS:10 Real-World Project for Practice</h2>
+                            <div class="course-container">
+                                <!-- Add your image source here -->
+                                <img src="images/html css js certificate.jpg" width="600vw" height="500vh"
+                                    alt="Certificate of Completion" onclick="toggleDescription11()">
+                            </div>
+                            <div class="course" id="course-description11">
+                                <h2>About</h2>
+                                <p>"Practical HTML, CSS, JS: 10 Real-World Projects for Practice" is a hands-on course
+                                    designed to teach participants the essential skills of web development through
+                                    real-world projects. This course covers the fundamentals of HTML, CSS, and
+                                    JavaScript, enabling participants to build and style interactive web pages.</p>
+
+                                <h3>Key Features:</h3>
+                                <ul>
+                                    <li><strong>Comprehensive Overview:</strong> Gain a solid understanding of HTML,
+                                        CSS, and JavaScript fundamentals.</li>
+                                    <li><strong>Hands-on Experience:</strong> Engage in 10 real-world projects that
+                                        reinforce learning and practical application.</li>
+                                    <li><strong>Expert Guidance:</strong> Receive guidance from experienced instructors
+                                        with expertise in web development.</li>
+                                    <li><strong>Certification:</strong> Receive a certification upon completion,
+                                        showcasing your proficiency in HTML, CSS, and JavaScript.</li>
+                                    <li><strong>Access to Tools:</strong> Learn to use popular tools and libraries for
+                                        web development.</li>
+                                    <li><strong>Flexible Learning:</strong> Study at your own pace, making it suitable
+                                        for learners of all levels.</li>
+                                </ul>
+
+                                <h3>What You'll Learn:</h3>
+                                <ul>
+                                    <li>Understanding the structure and semantics of HTML.</li>
+                                    <li>Applying CSS for styling and layout of web pages.</li>
+                                    <li>Implementing JavaScript for interactivity and dynamic content.</li>
+                                    <li>Building responsive web pages that work across different devices.</li>
+                                    <li>Working on 10 diverse projects, from simple websites to complex applications.
+                                    </li>
+                                </ul>
+
+                                <h3>Ideal For:</h3>
+                                <ul>
+                                    <li>Aspiring web developers and front-end developers.</li>
+                                    <li>Students and professionals seeking hands-on experience in web development.</li>
+                                    <li>Anyone interested in learning how to build and style web pages using HTML, CSS,
+                                        and JavaScript.</li>
+                                </ul>
+
+                                <p>This course equips you with the practical skills needed to create functional and
+                                    aesthetically pleasing web pages, enabling you to tackle real-world web development
+                                    projects with confidence.</p>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li><a href="index.html">About Me</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="internship.html">Internship</a></li>
+                        <li><a href="certification.html">Certificate</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script>
+        function toggleDescription() {
+            var description = document.getElementById("course-description");
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+        function toggleDescription2() {
+            var description = document.getElementById("course-description2");
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+        function toggleDescription3() {
+            var description = document.getElementById("course-description3");
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+        function toggleDescription4() {
+            var description = document.getElementById("course-description4");
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+        function toggleDescription5() {
+            var description = document.getElementById("course-description5");
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+        function toggleDescription6() {
+            var description = document.getElementById("course-description6");
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+        function toggleDescription7() {
+            var description = document.getElementById("course-description7");
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+        function toggleDescription8() {
+            var description = document.getElementById("course-description8");
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+        function toggleDescription9() {
+            var description = document.getElementById("course-description9");
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+        function toggleDescription10() {
+            var description = document.getElementById("course-description10");
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+        function toggleDescription11() {
+            var description = document.getElementById("course-description11");
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
